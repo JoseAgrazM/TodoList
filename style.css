@@ -235,8 +235,9 @@
 }
 
 /* Media Queries para dispositivos móviles */
-@media only screen and (max-width: 502px) {
+@media only screen and (max-width: 526px) {
 	#app-container {
+		top: 0;
 		width: 87%;
 		margin: 20px 5px; /* Ajuste de margen para dispositivos móviles */
 	}
@@ -247,7 +248,6 @@
 
 	.input-todo {
 		margin-right: 40px; /* Eliminar el margen derecho en dispositivos móviles */
-
 	}
 
 	.list-items {
@@ -269,7 +269,16 @@
 	}
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 425px) {
+	#app-container {
+		position: absolute;
+		top: 0;
+		width: 87%;
+		margin: 20px 5px; /* Ajuste de margen para dispositivos móviles */
+		max-height: 742.4px;
+		overflow: scroll;
+	}
+
 	.todo-item {
 		width: 96%;
 		& > label {
