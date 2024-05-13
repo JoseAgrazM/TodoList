@@ -269,14 +269,26 @@
 	}
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
 	#app-container {
-		position: absolute;
 		top: 0;
 		width: 87%;
-		margin: 20px 5px; /* Ajuste de margen para dispositivos móviles */
-		max-height: 742.4px;
-		overflow: scroll;
+		margin: 20px 5px;
+	}
+
+	.todo-item {
+		width: 96%;
+		& > label {
+			max-width: 280px;
+		}
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	#app-container {
+		top: 0;
+		width: 87%;
+		margin: 20px 5px;
 	}
 
 	.todo-item {
