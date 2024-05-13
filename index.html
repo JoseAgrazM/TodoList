@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Todo List</title>
+	</head>
+	<body>
+		<div id="app">
+			<div id="app-container">
+				<section class="head-app">
+					<h1 class="title-app">Lista de tareas</h1>
+					<section class="head-inputs">
+						<div class="container-checkAll">
+							<input type="checkbox" id="checkAll" />
+							<label for="">SELECT ALL</label>
+						</div>
+						<input
+							class="input-todo"
+							type="text"
+							placeholder="Que quieres hacer?"
+						/>
+					</section>
+				</section>
+
+				<section class="todo-container">
+					<ul class="list-items"></ul>
+				</section>
+				<footer class="footer">
+					<span class="todo-count">
+						<strong id="pendig-count">0</strong> pendiente(s)</span
+					>
+					<ul class="filters">
+						<li>
+							<a
+								id="All"
+								class="filtro"
+								class="selected"
+								href="#/"
+								>Todos</a
+							>
+						</li>
+						<li>
+							<a
+								id="Completed"
+								class="filtro"
+								class="selected"
+								href="#/completed"
+								>Completados</a
+							>
+						</li>
+						<li>
+							<a
+								id="Pending"
+								class="filtro"
+								class="selected"
+								href="#/active"
+								>Pendietes</a
+							>
+						</li>
+					</ul>
+					<button class="clear-completed">Borrar completados</button>
+				</footer>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>
