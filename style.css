@@ -4,6 +4,7 @@
 	padding: 0;
 	font-family: system-ui, -apple-system, sans-serif;
 }
+
 :root {
 	--primario: #1d3557;
 	--secundario: #457b9d;
@@ -156,8 +157,8 @@
 	overflow-wrap: break-word;
 
 	& > label {
-		max-width: 400px;
-		padding: 0 5px 0 5px;
+		max-width: 394px;
+		padding: 0 3px 0 5px;
 	}
 }
 
@@ -331,6 +332,7 @@
 .checkbox-wrapper input[type='checkbox'] {
 	visibility: hidden;
 	display: none;
+	margin: 0;
 }
 
 .checkbox-wrapper *,
