@@ -296,6 +296,12 @@
 		flex-direction: column;
 		gap: 10px;
 	}
+
+	.clear-completed {
+		font-size: 0.9em;
+		padding: 9px;
+		margin-bottom: 4px;
+	}
 }
 
 @media only screen and (max-width: 456px) {
