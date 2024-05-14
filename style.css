@@ -18,7 +18,12 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(187, 187, 187);
+	background: linear-gradient(
+		to bottom,
+		#ff00007b,
+		#0000ff7d,
+		rgba(0, 0, 20, 0.489)
+	);
 }
 
 #app-container {
@@ -30,7 +35,7 @@
 	justify-content: center;
 	align-items: center;
 	margin: 50px;
-	background-color: rgba(232, 232, 232, 0.621);
+	background-color: rgba(230, 230, 230, 0.824);
 	box-shadow: 10px 8px 9px rgba(112, 101, 101, 0.3);
 }
 
