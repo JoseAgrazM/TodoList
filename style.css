@@ -40,8 +40,8 @@
 }
 
 .head-app {
-	background-color: rgba(11, 135, 135, 0.438);
-	box-shadow: 0px 0px 10px rgba(6, 78, 78, 0.4);
+	background-color: rgba(219, 8, 194, 0.388);
+	box-shadow: 0px 0px 10px rgba(219, 8, 194, 0.515);
 	width: 100%;
 	padding: 8px;
 	display: flex;
@@ -52,6 +52,8 @@
 }
 
 .title-app {
+	color: rgba(25, 0, 25, 0.707);
+	text-shadow: 0px 0px 9px rgba(156, 0, 156, 0.295);
 	margin: 10px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 30px;
@@ -70,6 +72,7 @@
 	gap: 10px;
 	& > label {
 		width: 4px;
+		font-weight: 700;
 		color: rgb(0, 0, 0);
 		font-size: 11px;
 	}
@@ -91,7 +94,7 @@
 	background-color: transparent;
 	border-radius: 3px;
 	border-bottom: 3px solid purple;
-	caret-color: rgb(0, 255, 255);
+	caret-color: rgb(251, 255, 0);
 	font-size: 18px;
 
 	&::placeholder {
@@ -112,7 +115,8 @@
 	align-items: center;
 
 	& > li {
-		background-color: rgba(112, 101, 101, 0.368);
+		background-color: rgba(219, 239, 0, 0.457);
+
 		width: 100%;
 		margin: 10px;
 		display: flex;
@@ -121,6 +125,25 @@
 		list-style: none;
 		box-shadow: 3px 3px 6px rgba(112, 101, 101, 0.3);
 		border-radius: 16px;
+
+		&:hover {
+			background-color: #dbef0092;
+			transform: scale(1.03);
+		}
+	}
+}
+
+.list-items .completed {
+	background-color: rgba(112, 101, 101, 0.368);
+
+	& > .todo-item > label {
+		text-decoration: line-through;
+		text-decoration-thickness: 3px;
+		text-decoration-color: rgb(255, 0, 166);
+	}
+
+	&:hover {
+		background-color: rgba(112, 101, 101, 0.548);
 	}
 }
 
@@ -140,7 +163,7 @@
 }
 
 .close {
-	font-size: 30px;
+	font-size: 38px;
 	color: rgb(185, 19, 19);
 	border: 0;
 	cursor: pointer;
@@ -182,7 +205,7 @@
 	position: relative;
 	text-decoration: none;
 	font-size: large;
-	color: rgba(0, 137, 137, 0.999);
+	color: rgba(185, 0, 182, 0.87);
 }
 
 .filtro::after {
@@ -192,7 +215,7 @@
 	bottom: -4px;
 	width: 100%;
 	height: 2px;
-	background: rgba(0, 137, 137, 0.801);
+	background: rgba(177, 0, 190, 0.801);
 	border-radius: 5px;
 	transform: scaleX(0);
 	transform-origin: right;
@@ -214,8 +237,8 @@
 	transition: all 0.5s;
 	&:hover {
 		color: rgb(255, 255, 255);
-		background-color: rgba(15, 151, 151, 0.46);
-		box-shadow: 1px 1px 4px rgb(12, 127, 135);
+		background-color: rgba(185, 0, 182, 0.516);
+		box-shadow: 1px 1px 4px #b900b6de;
 
 		&:active {
 			transform: scale(0.9);
@@ -229,13 +252,13 @@
 }
 
 #pendig-count {
-	color: rgb(14, 100, 107);
+	color: rgba(185, 0, 182, 0.87);
 	font-size: 18px;
 }
 
 .selected {
 	font-weight: 700;
-	color: rgba(16, 122, 129, 0.89);
+	color: rgba(185, 0, 182, 0.87);
 }
 
 /* Media Queries para dispositivos móviles */
@@ -301,4 +324,51 @@
 			max-width: 200px;
 		}
 	}
+}
+
+/* CHECKBOX */
+
+.checkbox-wrapper input[type='checkbox'] {
+	visibility: hidden;
+	display: none;
+}
+
+.checkbox-wrapper *,
+.checkbox-wrapper ::after,
+.checkbox-wrapper ::before {
+	box-sizing: border-box;
+	user-select: none;
+}
+
+.checkbox-wrapper {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.checkbox-wrapper .label {
+	cursor: pointer;
+}
+
+.checkbox-wrapper .check {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	opacity: 0;
+}
+
+.checkbox-wrapper .label svg {
+	vertical-align: middle;
+}
+
+.checkbox-wrapper .path1 {
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	transition: 0.5s stroke-dashoffset;
+	opacity: 0;
+}
+
+.checkbox-wrapper .check:checked + label svg g path {
+	stroke-dashoffset: 0;
+	opacity: 1;
 }
