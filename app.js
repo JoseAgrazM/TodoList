@@ -8,12 +8,13 @@ const ElementsIDs = {
 	ValueInput: '.input-todo',
 	ClearCompleted: '.clear-completed',
 	TodoFilters: '.filtro',
-	CheckAll: '#checkAll',
+	CheckAll: '.checkAll',
 };
 
 export const App = () => {
 	const displayTodos = () => {
 		const todos = todoStore.getTodos(todoStore.getCurrentFilter());
+
 		renderTodos(ElementsIDs.TodoList, todos);
 		updatePendingCount();
 	};

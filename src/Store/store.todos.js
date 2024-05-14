@@ -13,7 +13,6 @@ const state = {
 
 const initStore = () => {
 	loadStore();
-	console.log('Iniciando initStore 😭😭😭');
 };
 
 const loadStore = () => {
