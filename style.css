@@ -231,7 +231,6 @@
 .selected {
 	font-weight: 700;
 	color: rgba(16, 122, 129, 0.89);
-	text-shadow: 1px 1px 3px rgb(25, 154, 163);
 }
 
 /* Media Queries para dispositivos móviles */
