@@ -262,23 +262,24 @@
 }
 
 /* Media Queries para dispositivos móviles */
+
 @media only screen and (max-width: 526px) {
 	#app-container {
 		top: 0;
 		width: 87%;
-		margin: 20px 5px; /* Ajuste de margen para dispositivos móviles */
+		margin: 20px 5px;
 	}
 
 	.title-app {
-		font-size: 24px; /* Tamaño de fuente reducido para dispositivos móviles */
+		font-size: 24px;
 	}
 
 	.input-todo {
-		margin-right: 40px; /* Eliminar el margen derecho en dispositivos móviles */
+		margin-right: 40px;
 	}
 
 	.list-items {
-		margin-top: 20px; /* Ajuste de margen superior para dispositivos móviles */
+		margin-top: 20px;
 	}
 
 	.todo-item {
