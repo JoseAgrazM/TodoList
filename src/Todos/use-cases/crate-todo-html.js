@@ -3,7 +3,6 @@ import { Todo } from '../Models/todo.model';
 
 export const createTodoHTML = todo => {
 	const { id, description, done, createAt } = todo;
-
 	if (!todo) throw new Error('A TODO object is required');
 
 	const sinNotas = `
